@@ -1,0 +1,746 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+    >watt (v3.3.0)</a>
+</h1>
+<h4>Powerful generator control flow</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.watt">module watt</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.watt.watt">
+            function <span class="apidocSignatureSpan"></span>watt
+            <span class="apidocSignatureSpan">(gen, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.watt.Watt">
+            function <span class="apidocSignatureSpan">watt.</span>Watt
+            <span class="apidocSignatureSpan">(gen, args, opts, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.watt.wrapAll">
+            function <span class="apidocSignatureSpan">watt.</span>wrapAll
+            <span class="apidocSignatureSpan">(object, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">watt.</span>Watt.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.watt.Watt">module watt.Watt</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.watt.Watt.Watt">
+            function <span class="apidocSignatureSpan">watt.</span>Watt
+            <span class="apidocSignatureSpan">(gen, args, opts, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.watt.Watt.super_">
+            function <span class="apidocSignatureSpan">watt.Watt.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.watt.Watt.prototype">module watt.Watt.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.watt.Watt.prototype._callCb">
+            function <span class="apidocSignatureSpan">watt.Watt.prototype.</span>_callCb
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.watt.Watt.prototype._getSyncGroup">
+            function <span class="apidocSignatureSpan">watt.Watt.prototype.</span>_getSyncGroup
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.watt.Watt.prototype.error">
+            function <span class="apidocSignatureSpan">watt.Watt.prototype.</span>error
+            <span class="apidocSignatureSpan">(err)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.watt.Watt.prototype.next">
+            function <span class="apidocSignatureSpan">watt.Watt.prototype.</span>next
+            <span class="apidocSignatureSpan">(v)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.watt.Watt.prototype.onRes">
+            function <span class="apidocSignatureSpan">watt.Watt.prototype.</span>onRes
+            <span class="apidocSignatureSpan">(res)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.watt.Watt.prototype.parallel">
+            function <span class="apidocSignatureSpan">watt.Watt.prototype.</span>parallel
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.watt.Watt.prototype.run">
+            function <span class="apidocSignatureSpan">watt.Watt.prototype.</span>run
+            <span class="apidocSignatureSpan">(cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.watt.Watt.prototype.sync">
+            function <span class="apidocSignatureSpan">watt.Watt.prototype.</span>sync
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.watt" id="apidoc.module.watt">module watt</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.watt.watt" id="apidoc.element.watt.watt">
+        function <span class="apidocSignatureSpan"></span>watt
+        <span class="apidocSignatureSpan">(gen, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrap(gen, opts) {
+  if (typeof gen === &#x27;object&#x27;) {
+    opts = gen
+    return function (gen) {
+      return Watt.wrap(gen, opts)
+    }
+  }
+
+  opts = opts || {}
+  return function () {
+    var args = Array.prototype.slice.call(arguments, 0)
+    var cb
+    if (!opts.noCallback &#x26;&#x26; typeof args[args.length - 1] === &#x27;function&#x27;) {
+      cb = args[args.length - 1]
+      args = args.slice(0, -1)
+    }
+    if (!opts.context) opts.context = this
+    return Watt(gen, args, opts, cb).run()
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.watt.Watt" id="apidoc.element.watt.Watt">
+        function <span class="apidocSignatureSpan">watt.</span>Watt
+        <span class="apidocSignatureSpan">(gen, args, opts, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Watt(gen, args, opts, cb) {
+  if (typeof args === &#x27;function&#x27;) {
+    cb = args
+    args = null
+    opts = {}
+  } else if (typeof opts === &#x27;function&#x27;) {
+    cb = opts
+    opts = {}
+  }
+  args = args || []
+  opts = opts || {}
+  opts.context = opts.context || this
+
+  if (!(this instanceof Watt)) return new Watt(gen, args, opts, cb)
+
+  this._cb = cb
+  this._cbCalled = false
+
+  this._syncGroup = null
+
+  var next = createCallbacks(this.next.bind(this), this.error.bind(this))
+  next.parallel = this.parallel.bind(this)
+  next.sync = this.sync.bind(this)
+
+  var passedArgs
+  if (opts.prepend) passedArgs = ([ next ]).concat(args)
+  else passedArgs = args.concat([ next ])
+  this.iterator = gen.apply(opts.context || this, passedArgs)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.watt.wrapAll" id="apidoc.element.watt.wrapAll">
+        function <span class="apidocSignatureSpan">watt.</span>wrapAll
+        <span class="apidocSignatureSpan">(object, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function wrapAll(object, opts) {
+  var names = Array.prototype.slice.call(arguments, typeof opts === &#x27;object&#x27; ? 2 : 1)
+  if (typeof opts === &#x27;string&#x27;) opts = {}
+  opts = Object.assign({ context: object }, opts)
+
+  function wrapAndBind (name) {
+    if (!object[name] || !object[name].constructor ||
+      object[name].constructor.name !== &#x27;GeneratorFunction&#x27;) return
+    object[name] = wrap(object[name], opts)
+  }
+
+  var name
+  if (names.length &#x3e; 0) {
+    for (name of names) wrapAndBind(name)
+  } else {
+    if (object.constructor &#x26;&#x26; object.constructor.prototype) {
+      var classProperties = Object.getOwnPropertyNames(object.constructor.prototype)
+      for (name of classProperties) wrapAndBind(name)
+    }
+    for (name in object) wrapAndBind(name)
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+// wait until all timeouts have finished
+var res = yield next.sync()
+// res is: [ 0, 1, 2, 3, 4 ]
+```
+
+----
+### `watt.<span class="apidocCodeKeywordSpan">wrapAll</span>(object, [opts], [names...])`
+
+Wraps generator function properties of `object`. Each wrapped generator function gets bound to the context of `object`. If no values
+ are specified for `names`, all generator function properties are wrapped. If one or more strings are specified for `names`, only
+ the properties with those keys will be wrapped.
+
+`opts` can be an options object that will be passed to [`watt()`](#watt-generatorargsnext-opts-).
+
+This can be useful for wrapping generator methods of a class (call `watt.wrapAll(this)` in the constructor).
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.watt.Watt" id="apidoc.module.watt.Watt">module watt.Watt</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.watt.Watt.Watt" id="apidoc.element.watt.Watt.Watt">
+        function <span class="apidocSignatureSpan">watt.</span>Watt
+        <span class="apidocSignatureSpan">(gen, args, opts, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Watt(gen, args, opts, cb) {
+  if (typeof args === &#x27;function&#x27;) {
+    cb = args
+    args = null
+    opts = {}
+  } else if (typeof opts === &#x27;function&#x27;) {
+    cb = opts
+    opts = {}
+  }
+  args = args || []
+  opts = opts || {}
+  opts.context = opts.context || this
+
+  if (!(this instanceof Watt)) return new Watt(gen, args, opts, cb)
+
+  this._cb = cb
+  this._cbCalled = false
+
+  this._syncGroup = null
+
+  var next = createCallbacks(this.next.bind(this), this.error.bind(this))
+  next.parallel = this.parallel.bind(this)
+  next.sync = this.sync.bind(this)
+
+  var passedArgs
+  if (opts.prepend) passedArgs = ([ next ]).concat(args)
+  else passedArgs = args.concat([ next ])
+  this.iterator = gen.apply(opts.context || this, passedArgs)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.watt.Watt.super_" id="apidoc.element.watt.Watt.super_">
+        function <span class="apidocSignatureSpan">watt.Watt.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.watt.Watt.prototype" id="apidoc.module.watt.Watt.prototype">module watt.Watt.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.watt.Watt.prototype._callCb" id="apidoc.element.watt.Watt.prototype._callCb">
+        function <span class="apidocSignatureSpan">watt.Watt.prototype.</span>_callCb
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_callCb = function () {
+  if (this._cbCalled) return
+  this._cbCalled = true
+  var args = Array.prototype.slice.call(arguments, 0)
+  this._cb.apply(this, args)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+}
+
+Watt.prototype.next = function (v) {
+setImmediate(() =&#x3e; {
+  try {
+    var res = this.iterator.next(v)
+  } catch (err) {
+    return this.<span class="apidocCodeKeywordSpan">_callCb</span>(err)
+  }
+  this.onRes(res)
+})
+}
+
+Watt.prototype.onRes = function (res) {
+if (!res) return
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.watt.Watt.prototype._getSyncGroup" id="apidoc.element.watt.Watt.prototype._getSyncGroup">
+        function <span class="apidocSignatureSpan">watt.Watt.prototype.</span>_getSyncGroup
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_getSyncGroup = function () {
+  if (this._syncGroup) return this._syncGroup
+  this._syncGroup = {
+    running: 0,
+    finished: 0,
+    results: [],
+    error: null
+  }
+  return this._syncGroup
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  error: null
+}
+return this._syncGroup
+}
+
+Watt.prototype.parallel = function () {
+var self = this
+var syncGroup = this.<span class="apidocCodeKeywordSpan">_getSyncGroup</span>()
+var i = syncGroup.running
+syncGroup.running += 1
+
+var next = function (value) {
+  if (self._syncGroup !== syncGroup) return
+  syncGroup.running -= 1
+  syncGroup.finished += 1
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.watt.Watt.prototype.error" id="apidoc.element.watt.Watt.prototype.error">
+        function <span class="apidocSignatureSpan">watt.Watt.prototype.</span>error
+        <span class="apidocSignatureSpan">(err)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">error = function (err) {
+  if (!err) return
+  try {
+    var res = this.iterator.throw(err)
+  } catch (err) {
+    return this._callCb(err)
+  }
+  this.onRes(res)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  yield fs.writeFile(dest, data, next)
+})
+```
+
+**Both of these can be called with:**
+```js
+copyFile(&#x27;a&#x27;, &#x27;b&#x27;, function (err) {
+  if (err) return console.<span class="apidocCodeKeywordSpan">error</span>(err)
+  console.log(&#x27;copied file&#x27;)
+})
+```
+
+## Usage
+
+`npm install watt`
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.watt.Watt.prototype.next" id="apidoc.element.watt.Watt.prototype.next">
+        function <span class="apidocSignatureSpan">watt.Watt.prototype.</span>next
+        <span class="apidocSignatureSpan">(v)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">next = function (v) {
+  setImmediate(() =&#x3e; {
+    try {
+      var res = this.iterator.next(v)
+    } catch (err) {
+      return this._callCb(err)
+    }
+    this.onRes(res)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+          if (process.exit) process.exit(1)
+        }
+      }
+      return reject(err)
+    }
+    resolve(res)
+  }
+  this.<span class="apidocCodeKeywordSpan">next</span>()
+})
+// hack to check if the consumer is checking for rejections
+var handlingReject = false
+var then = this._promise.then.bind(this._promise)
+var _catch = this._promise.catch.bind(this._promise)
+this._promise.then = (onFulfilled, onRejected) =&#x3e; {
+  if (onRejected) handlingReject = true
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.watt.Watt.prototype.onRes" id="apidoc.element.watt.Watt.prototype.onRes">
+        function <span class="apidocSignatureSpan">watt.Watt.prototype.</span>onRes
+        <span class="apidocSignatureSpan">(res)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onRes = function (res) {
+  if (!res) return
+  if (res.done) {
+    return this._callCb(null, res.value)
+  }
+  if (res.value instanceof Promise) {
+    res.value.then(this.next.bind(this), this.error.bind(this))
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+Watt.prototype.next = function (v) {
+setImmediate(() =&#x3e; {
+  try {
+    var res = this.iterator.next(v)
+  } catch (err) {
+    return this._callCb(err)
+  }
+  this.<span class="apidocCodeKeywordSpan">onRes</span>(res)
+})
+}
+
+Watt.prototype.onRes = function (res) {
+if (!res) return
+if (res.done) {
+  return this._callCb(null, res.value)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.watt.Watt.prototype.parallel" id="apidoc.element.watt.Watt.prototype.parallel">
+        function <span class="apidocSignatureSpan">watt.Watt.prototype.</span>parallel
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parallel = function () {
+  var self = this
+  var syncGroup = this._getSyncGroup()
+  var i = syncGroup.running
+  syncGroup.running += 1
+
+  var next = function (value) {
+    if (self._syncGroup !== syncGroup) return
+    syncGroup.running -= 1
+    syncGroup.finished += 1
+    syncGroup.results[i] = value
+    if (syncGroup.running === 0 &#x26;&#x26; syncGroup.onFinish) syncGroup.onFinish()
+  }
+
+  var error = function (err) {
+    if (self._syncGroup !== syncGroup) return
+    syncGroup.error = err
+    if (syncGroup.onFinish) syncGroup.onFinish()
+  }
+
+  return createCallbacks(next, error)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+var args = yield fs.readFile(&#x27;file.txt&#x27;, next.args)
+var error = args[0]
+var data = args[1]
+```
+
+----
+### `next.<span class="apidocCodeKeywordSpan">parallel</span>()`, `next.sync()`
+
+Call `next.parallel()` to execute async calls in parallel, then call `yield next.sync()` to wait for these tasks to finish. The
+result of `next.sync()` will be an array of the result values of tasks, in the order they were spawned. `next.sync()` will unyield
+ as soon as a task gives an error, or when all the tasks have finished.
+
+`next.parallel()` returns a callback similar to `next`, which treats the first value as an error and the second as the return value
+. Like `next`, this callback also has the `arg` and `args` properties.
+
+Note that you should not `yield` before a parallel call since we don&#x27;t want the generator to block until the call to `sync`.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.watt.Watt.prototype.run" id="apidoc.element.watt.Watt.prototype.run">
+        function <span class="apidocSignatureSpan">watt.Watt.prototype.</span>run
+        <span class="apidocSignatureSpan">(cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function (cb) {
+  if (cb) {
+    this._cb = cb
+  } else if (!this._cb) {
+    // if no cb is specified, return a Promise instead
+    this._promise = new Promise((resolve, reject) =&#x3e; {
+      this._cb = (err, res) =&#x3e; {
+        if (err) {
+          if (!handlingReject) {
+            if (process.listeners &#x26;&#x26; process.listeners(&#x27;uncaughtException&#x27;).length) {
+              return process.emit(&#x27;uncaughtException&#x27;, err)
+            } else {
+              // ensure errors don&#x27;t happen silently
+              console.error(err.stack ? err.stack : err)
+              if (process.exit) process.exit(1)
+            }
+          }
+          return reject(err)
+        }
+        resolve(res)
+      }
+      this.next()
+    })
+    // hack to check if the consumer is checking for rejections
+    var handlingReject = false
+    var then = this._promise.then.bind(this._promise)
+    var _catch = this._promise.catch.bind(this._promise)
+    this._promise.then = (onFulfilled, onRejected) =&#x3e; {
+      if (onRejected) handlingReject = true
+      then(onFulfilled, onRejected)
+    }
+    this._promise.catch = (onRejected) =&#x3e; {
+      if (onRejected) handlingReject = true
+      _catch(onRejected)
+    }
+    return this._promise
+  }
+  this.next()
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  var args = Array.prototype.slice.call(arguments, 0)
+  var cb
+  if (!opts.noCallback &#x26;&#x26; typeof args[args.length - 1] === &#x27;function&#x27;) {
+    cb = args[args.length - 1]
+    args = args.slice(0, -1)
+  }
+  if (!opts.context) opts.context = this
+  return Watt(gen, args, opts, cb).<span class="apidocCodeKeywordSpan">run</span>()
+}
+}
+
+function wrapAll (object, opts) {
+var names = Array.prototype.slice.call(arguments, typeof opts === &#x27;object&#x27; ? 2 : 1)
+if (typeof opts === &#x27;string&#x27;) opts = {}
+opts = Object.assign({ context: object }, opts)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.watt.Watt.prototype.sync" id="apidoc.element.watt.Watt.prototype.sync">
+        function <span class="apidocSignatureSpan">watt.Watt.prototype.</span>sync
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sync = function () {
+  var self = this
+  var syncGroup = this._syncGroup
+  return new Promise((resolve, reject) =&#x3e; {
+    if (!syncGroup) return resolve(null)
+    function onFinish (resolve, reject) {
+      if (syncGroup.onFinish) self._syncGroup = null
+      if (syncGroup.error) return reject(syncGroup.error)
+      if (syncGroup.running === 0) return resolve(syncGroup.results)
+      if (!syncGroup.onFinish) syncGroup.onFinish = () =&#x3e; onFinish(resolve, reject)
+    }
+    onFinish(resolve, reject)
+  })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+var args = yield fs.readFile(&#x27;file.txt&#x27;, next.args)
+var error = args[0]
+var data = args[1]
+```
+
+----
+### `next.parallel()`, `next.<span class="apidocCodeKeywordSpan">sync</span>()`
+
+Call `next.parallel()` to execute async calls in parallel, then call `yield next.sync()` to wait for these tasks to finish. The
+result of `next.sync()` will be an array of the result values of tasks, in the order they were spawned. `next.sync()` will unyield
+ as soon as a task gives an error, or when all the tasks have finished.
+
+`next.parallel()` returns a callback similar to `next`, which treats the first value as an error and the second as the return value
+. Like `next`, this callback also has the `arg` and `args` properties.
+
+Note that you should not `yield` before a parallel call since we don&#x27;t want the generator to block until the call to `sync`.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
